@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bingo_shape_white_corner"
+    android:paddingTop="16dp"
+    android:paddingBottom="8dp"
+    tools:context=".activity.BingoLoginActivity">
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/bingo_ic_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/bingo_ic_close"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/bingo_ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/bingo_shape_gray_500_circle"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo">
+
+        <TextView
+            android:id="@+id/tv_country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="?android:selectableItemBackground"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="0dp"
+            android:text="+86"
+            android:textColor="@color/color_bingo_black"
+            android:textSize="16sp"
+            app:drawableEndCompat="@drawable/bingo_arrow_drop_down_black_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_popup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/layout_phone_number"
+            app:layout_constraintRight_toRightOf="@+id/layout_phone_number"
+            app:layout_constraintTop_toBottomOf="@+id/tv_country_code" />
+
+        <View
+            android:id="@+id/v_divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/color_bingo_gray_text"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_country_code"
+            app:layout_constraintLeft_toRightOf="@+id/tv_country_code"
+            app:layout_constraintRight_toLeftOf="@+id/et_phone_number"
+            app:layout_constraintTop_toTopOf="@+id/tv_country_code" />
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_phone_number"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingStart="8dp"
+            android:paddingEnd="4dp"
+            android:textColorHint="@color/color_bingo_text_hint"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/v_divider"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="18520499613" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bingo_selector_btn_red_corner"
+        android:text="下一步"
+        android:textColor="@color/color_bingo_common_white"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_phone_number"
+        app:layout_constraintRight_toRightOf="@+id/layout_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/layout_phone_number" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_quick_game"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/layout_account_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_next">
+
+        <ImageView
+            android:id="@+id/iv_quick_game"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bingo_ic_quick_game"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_quick_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="快速游戏"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_quick_game"
+            app:layout_constraintLeft_toRightOf="@+id/iv_quick_game"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_quick_game" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_account_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/layout_quick_game"
+        app:layout_constraintLeft_toRightOf="@+id/layout_quick_game"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_quick_game">
+
+        <ImageView
+            android:id="@+id/iv_account_login"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bingo_ic_account_login"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_account_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="账号登录"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_account_login"
+            app:layout_constraintLeft_toRightOf="@+id/iv_account_login"
+            app:layout_constraintTop_toTopOf="@+id/iv_account_login" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_privacy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_quick_game">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cb_privacy"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:checked="true"
+            android:theme="@style/BingoCheckBoxStyle"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/tv_privacy"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_privacy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="@string/bingo_privacy_tip"
+            android:textColor="@color/color_bingo_gray_text"
+            app:layout_constraintBottom_toBottomOf="@+id/cb_privacy"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintLeft_toRightOf="@+id/cb_privacy"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cb_privacy" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

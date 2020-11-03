@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bingo.sdk">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application android:hasFragileUserData="true">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <activity
+            android:name=".activity.BingoNoticeWebActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|keyboard|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/BingoTheme.NoActionBar.Dialog" />
+        <activity
+            android:name=".activity.BingoWebActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|keyboard|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/BingoTheme.NoActionBar" />
+        <activity
+            android:name=".activity.BingoWebPayActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@style/BingoTheme.NoActionBar" />
+        <activity
+            android:name=".activity.BingoLoginActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@style/BingoTheme.Dialog" />
+        <activity
+            android:name=".activity.BingoChangeAccountActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="landscape"
+            android:theme="@style/BingoTheme.Dialog" />
+
+        <provider
+            android:name=".provider.BingoFileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bingo_paths" />
+        </provider>
+
+        <service android:name=".service.FileDownloadService" />
+    </application>
+
+</manifest>

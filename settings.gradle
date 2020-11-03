@@ -1,0 +1,3 @@
+include ':bingosdk'
+include ':app'
+rootProject.name = "BingoSDK"

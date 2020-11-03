@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#343339</color>
+    <color name="colorPrimaryDark">#343339</color>
+    <color name="color_bingo_common_grey">#ECECEC</color>
+    <color name="color_bingo_common_white">#f9fafd</color>
+    <color name="color_bingo_shadow_white">#e7e8ea</color>
+    <color name="color_bingo_white">#ffffff</color>
+    <color name="color_bingo_white_alpha_50">#80ffffff</color>
+    <color name="color_bingo_white_alpha_20">#33ffffff</color>
+    <color name="color_bingo_common_grey_pressed">#c7c7c7</color>
+    <color name="color_bingo_common_toolbar">#343339</color>
+    <color name="color_bingo_common_toolbar_pressed">#555361</color>
+    <color name="color_bingo_common_text_black">#4a4948</color>
+    <color name="color_bingo_common_layout_black">#343338</color>
+    <color name="color_bingo_common_text_yellow">#FE9900</color>
+    <color name="color_bingo_common_layout_grey">#F7F7F7</color>
+    <color name="color_bingo_common_text_grey">#8d8d8d</color>
+    <color name="color_bingo_common_text_red">#fb4f4f</color>
+    <color name="color_bingo_common_text_green">#44b035</color>
+    <color name="color_bingo_common_button_grey">#CBCBCB</color>
+    <color name="color_bingo_common_button_grey_alpha_85">#d9CBCBCB</color>
+    <color name="color_bingo_common_button_grey_pressed">#afafaf</color>
+    <color name="color_bingo_common_button_yellow">#FF9900</color>
+    <color name="color_bingo_common_button_yellow_pressed">#cf7d00</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_bingo_gray_text">#BABABA</color>
+    <color name="color_bingo_gray_disabled">#8F8E8E</color>
+    <color name="color_bingo_btn_red">#fb4f4f</color>
+    <color name="color_bingo_btn_red_pressed">#EA2C2C</color>
+    <color name="color_bingo_btn_gray">#BABABA</color>
+    <color name="color_bingo_btn_gray_pressed">#A3A1A1</color>
+    <color name="color_bingo_text_hint">#c0c0c0</color>
+    <color name="bingo_black_overlay">#66000000</color>
+    <color name="color_bingo_toast_background">#f2484d58</color>
+    <color name="color_bingo_floatview_pannel">#d9040609</color>
+    <color name="color_bingo_black">#000000</color>
+    <color name="color_bingo_text_gray_900">#212121</color>
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/color_bingo_btn_gray_pressed">
+
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:width="4dp"
+                android:height="4dp" />
+            <corners android:radius="4dp" />
+            <solid android:color="@color/color_bingo_btn_gray" />
+        </shape>
+    </item>
+</ripple>

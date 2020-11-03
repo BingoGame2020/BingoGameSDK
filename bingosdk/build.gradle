@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+ext {
+    SDK_VERSION = "1.0.0"
+    SDK_VERSION_INT = 100
+}
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+    defaultConfig {
+
+        minSdkVersion 21
+        targetSdkVersion 30
+        buildConfigField 'String', 'SDK_VERSION', '"' + SDK_VERSION + '"'
+        buildConfigField 'int', 'SDK_VERSION_INT', '' + SDK_VERSION_INT + ''
+        consumerProguardFiles "consumer-rules.pro"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    api fileTree(dir: "libs", include: ["*.jar"])
+//    compileOnly fileTree(dir: "libs", include: ["*.aar"])
+    implementation fileTree(dir: "libs", include: ["*.aar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    api 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.bytedance.applog:RangersAppLog-Lite-cn:3.3.12'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+//    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+
+}
+
+apply from: 'upload.gradle'

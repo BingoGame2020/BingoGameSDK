@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bingo_shape_white_corner"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    tools:context=".activity.BingoLoginActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/bingo_ic_close"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:scaleType="center"
+        android:src="@drawable/bingo_ic_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_close">
+
+
+        <EditText
+            android:id="@+id/et_bingo_account"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bingo_shape_gray_500_circle"
+            android:hint="请输入冰果游戏账号"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="18000132"
+            android:textColorHint="@color/color_bingo_gray_text"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_popup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@+id/et_bingo_account"
+            app:layout_constraintRight_toRightOf="@+id/et_bingo_account"
+            app:layout_constraintTop_toBottomOf="@+id/et_bingo_account" />
+
+        <ImageView
+            android:id="@+id/iv_account_list"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bingo_ic_arrow_down"
+            app:layout_constraintBottom_toBottomOf="@+id/et_bingo_account"
+            app:layout_constraintRight_toRightOf="@+id/et_bingo_account"
+            app:layout_constraintTop_toTopOf="@+id/et_bingo_account" />
+
+        <EditText
+            android:id="@+id/et_bingo_password"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bingo_shape_gray_500_circle"
+            android:digits="@string/digits_password"
+            android:hint="请输入登录密码"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="534037"
+            android:textColorHint="@color/color_bingo_gray_text"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_bingo_account" />
+
+        <ImageView
+            android:id="@+id/iv_show_pwd"
+            android:layout_width="24dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="4dp"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/bingo_ic_pwd_invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/et_bingo_password"
+            app:layout_constraintRight_toRightOf="@+id/et_bingo_password"
+            app:layout_constraintTop_toTopOf="@+id/et_bingo_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bingo_selector_btn_red_corner"
+        android:text="登录"
+        android:textColor="@color/color_bingo_common_white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/layout_tip"
+        app:layout_constraintLeft_toLeftOf="@+id/layout_account"
+        app:layout_constraintRight_toRightOf="@+id/layout_account"
+        app:layout_constraintTop_toBottomOf="@+id/layout_account"
+        app:layout_goneMarginBottom="24dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_tip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/btn_login"
+        app:layout_constraintRight_toRightOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login">
+
+        <TextView
+            android:id="@+id/tv_no_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="没有账号?"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="立即注册"
+            android:textColor="@color/color_bingo_common_text_red"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_no_account"
+            app:layout_constraintLeft_toRightOf="@+id/tv_no_account"
+            app:layout_constraintTop_toTopOf="@+id/tv_no_account" />
+
+        <TextView
+            android:id="@+id/tv_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="忘记密码"
+            android:textColor="@color/color_bingo_common_text_red"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_no_account"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_no_account" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

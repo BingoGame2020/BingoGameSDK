@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bingo.sdk.demo">
+
+
+    <application
+        android:name=".BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <!--游戏id-->
+        <meta-data
+            android:name="game_id"
+            android:value="437" />
+        <!-- 联运商id-->
+        <meta-data
+            android:name="partner_id"
+            android:value="25" />
+        <!--渠道id 1用于区分游戏渠道,2用于区分打包使用哪个渠道的实现类-->
+        <meta-data
+            android:name="channel_id"
+            android:value="1" />
+        <!--分包id??-->
+        <meta-data
+            android:name="dispatch_id"
+            android:value="2" />
+        <!--        巨量引擎 appid-->
+        <meta-data
+            android:name="rangers_app_id"
+            android:value="\1673729332503560" />
+        <!-- 巨量引擎渠道名称-->
+        <meta-data
+            android:name="rangers_app_channel"
+            android:value="origin" />
+
+        <!-- 行为数据源 ID:-->
+        <meta-data
+            android:name="gdt_app_id"
+            android:value="\1110674455" />
+
+        <meta-data
+            android:name="gdt_app_key"
+            android:value="16264e4f6d10553d06747f9999bbf510" />
+        <!--        广点通渠道,选填-->
+        <meta-data
+            android:name="gdt_app_channel"
+            android:value="origin" />
+
+
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|layoutDirection|screenSize|keyboard|keyboardHidden"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

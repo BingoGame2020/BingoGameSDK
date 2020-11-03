@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="itc">
+        <item>+86</item>
+    </string-array>
+    <string name="digits_password">1234567890qwertyuiopasdfghjklzxcvbnm._</string>
+    <string name="digits_number_only">1234567890</string>
+    <string name="bingo_error_ssl_cert_invalid">该网站SSL证书错误,是否继续访问?</string>
+    <string name="bingo_common_continue">继续</string>
+    <string name="bingo_common_dialog_cancel">取消</string>
+    <string name="bingo_tip_real_name">根据国家规定，游戏用户必须实名认证，未实名用户游戏时长将受限或无法充值。实名信息仅用于登记且绝对保密，请放心填写。</string>
+    <string name="bingo_tip_bind_phone">为了您的账号安全，请您绑定手机号码</string>
+    <!--身份证规则-->
+    <string name="digits_id_card">1234567890xX</string>
+    <string name="bingo_common_dialog_tips">提示</string>
+    <string name="bingo_permission_request_tip">权限被拒绝, 拒绝授权可能会造成程序无法正常运行,请带"应用信息->权限" 中授予权限.</string>
+    <string name="bingo_common_dialog_setting">设置</string>
+    <string name="bingo_privacy_tip">我已详细阅读并同意&lt;用户与隐私协议&gt;</string>
+    <string name="tip_pay_result">1:如果您已支付成功,但是查询结果一直处于未成功状态,请长按订单号复制,然后点击[支付遇到问题]联系客服\n2:如您已完成付款,请点击[已完成付款]</string>
+    <string name="bingo_tip_unrealname_limit">您的账号尚未实名认证,未实名账号每日累积游戏时间不得超过%s小时.\n您已累积在线%s分钟,剩余可玩时间约为%s分钟.请您尽快完成实名认证.</string>
+</resources>
